@@ -113,3 +113,33 @@ input {
     text-align: center;
     letter-spacing: 8px;
 }
+
+.warning {
+    border: 3px solid #d6a23d;
+}
+
+.shake {
+    animation: shakeConsole 0.25s 4;
+}
+
+.lockdown {
+    animation: alarmFlash 0.5s infinite alternate;
+}
+
+@keyframes shakeConsole {
+    0% { transform: translateX(0); }
+    25% { transform: translateX(-8px); }
+    50% { transform: translateX(8px); }
+    75% { transform: translateX(-8px); }
+    100% { transform: translateX(0); }
+}
+
+@keyframes alarmFlash {
+    from {
+        border-color: #697386;
+    }
+
+    to {
+        border-color: #d45b5b;
+    }
+}

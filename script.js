@@ -31,3 +31,22 @@ function scanID() {
 }
 
 scanBtn.addEventListener("click", scanID);
+
+function resetSystem() {
+    securityLevel = 1;
+    idScanned = false;
+    failedAttempts = 0;
+    redButtonPresses = 0;
+    systemLocked = false;
+
+    levelText.textContent = securityLevel;
+    message.textContent = "scan your id to begin.";
+    statusText.textContent = "ACCESS DENIED";
+    lockIcon.textContent = "LOCKED";
+    logText.textContent = "waiting for suspicious activity...";
+    codeInput.value = "";
+
+    consoleBox.classList.remove("warning", "shake", "lockdown");
+}
+
+resetBtn.addEventListener("click", resetSystem);
