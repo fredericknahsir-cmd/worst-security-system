@@ -1,7 +1,6 @@
 const scanBtn = document.querySelector("#scanBtn");
 const codeBtn = document.querySelector("#codeBtn");
-const redBtn = document.querySelector("#redBtn");
-const reseBtn = document.querySelector("#resetBtn");
+const resetBtn = document.querySelector("#redBtn");
 
 const codeInput = document.querySelector("#codeInput");
 const message = document.querySelector("#message");
@@ -35,7 +34,7 @@ scanBtn.addEventListener("click", scanID);
 function resetSystem() {
     securityLevel = 1;
     idScanned = false;
-    failedAttempts = 0;
+    failedAttemps = 0;
     redButtonPresses = 0;
     systemLocked = false;
 
